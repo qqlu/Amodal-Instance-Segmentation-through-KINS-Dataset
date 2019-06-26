@@ -1,5 +1,5 @@
 # [Amodal Instance Segmentation through KINS Dataset](http://jiaya.me/papers/amodel_cvpr19.pdf)
-by [Lu Qi](luqi.info), Li Jiang, [Shu Liu](shuliu.me), [Xiaoyong Shen](http://xiaoyongshen.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/).
+by [Lu Qi](http://www.luqi.info), Li Jiang, [Shu Liu](http://www.shuliu.me), [Xiaoyong Shen](http://xiaoyongshen.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/).
 
 ## Introduction
 This repository has released the training set of KINS. The annotation format follows COCO style. The mask can be decoded by COCOAPI.

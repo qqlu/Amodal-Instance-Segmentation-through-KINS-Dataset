@@ -6,8 +6,6 @@ This repository has released the training and test set of KINS. The annotation f
 
 And the pytorch implementation of the method in CVPR 2019 paper '[Amodal Instance Segmentation through KINS Dataset](http://jiaya.me/papers/amodel_cvpr19.pdf)' will be released. The codebase is based on [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark).
 
-
-
 ## Citation
 
 If our method and dataset are useful for your research, please consider citing:

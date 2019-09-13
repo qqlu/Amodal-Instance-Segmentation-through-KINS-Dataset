@@ -1,0 +1,49 @@
+MODEL:
+  TYPE: generalized_rcnn
+  CONV_BODY: FPN.fpn_ResNet50_conv5_body
+  FASTER_RCNN: True
+  MASK_ON: True
+  INMODAL_ON: True
+RESNETS:
+  IMAGENET_PRETRAINED_WEIGHTS: 'data/pretrained_model/resnet50_caffe.pth'
+NUM_GPUS: 8
+SOLVER:
+  WEIGHT_DECAY: 0.0001
+  LR_POLICY: steps_with_decay
+  BASE_LR: 0.02
+  GAMMA: 0.1
+  MAX_ITER: 24000
+  STEPS: [0, 20000, 22000]
+FPN:
+  FPN_ON: True
+  PANET_ON: False
+  MULTILEVEL_ROIS: True
+  MULTILEVEL_RPN: True
+FAST_RCNN:
+  ROI_BOX_HEAD: fast_rcnn_heads_split_amodal_class.roi_Xconv1fc_head_return_feature
+  ROI_XFORM_METHOD: RoIAlign
+  ROI_XFORM_RESOLUTION: 7
+  ROI_XFORM_SAMPLING_RATIO: 2
+  EXTRACT_FEATURE: 0
+MRCNN:
+  ROI_MASK_HEAD: mask_rcnn_heads.mask_rcnn_fcn_head_v1up4convs_ff
+  FUSION_FEATURE: 2
+  RESOLUTION: 28  # (output mask resolution) default 14
+  ROI_XFORM_METHOD: RoIAlign
+  ROI_XFORM_RESOLUTION: 14  # default 7
+  ROI_XFORM_SAMPLING_RATIO: 2  # default 0
+  DILATION: 1  # default 2
+  CONV_INIT: MSRAFill  # default GaussianFill
+TRAIN:
+  SCALES: (800,)
+  AMODAL_CLASS_WEIGHT: 8.0
+  MAX_SIZE: 3000
+  IMS_PER_BATCH: 1
+  BATCH_SIZE_PER_IM: 512
+  RPN_PRE_NMS_TOP_N: 2000  # Per FPN level
+TEST:
+  SCALE: 800
+  MAX_SIZE: 3000
+  NMS: 0.5
+  RPN_PRE_NMS_TOP_N: 1000  # Per FPN level
+  RPN_POST_NMS_TOP_N: 1000

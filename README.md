@@ -4,7 +4,8 @@ by [Lu Qi](http://www.luqi.info), Li Jiang, [Shu Liu](http://www.shuliu.me), [Xi
 ## Introduction
 This repository has released the training and test set of KINS. The annotation format follows COCO style. The mask can be decoded by COCOAPI.
 
-And the pytorch implementation of the method in CVPR 2019 paper '[Amodal Instance Segmentation through KINS Dataset](http://jiaya.me/papers/amodel_cvpr19.pdf)' will be released. The codebase is based on [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark).
+And the reference code of the method in CVPR 2019 paper '[Amodal Instance Segmentation through KINS Dataset](http://jiaya.me/papers/amodel_cvpr19.pdf)' has been released. The codebase is based on [pytorch-detectron](https://github.com/roytseng-tw/Detectron.pytorch).
+You can see some details from our released code. I am sorry that I can not transform it into the maskrcnn-benchmark with clear version.
 
 ## Citation
 

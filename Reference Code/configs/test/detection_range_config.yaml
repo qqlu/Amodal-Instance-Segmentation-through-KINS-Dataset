@@ -1,0 +1,266 @@
+!!python/object/new:utils.collections.AttrDict
+dictitems:
+  BBOX_XFORM_CLIP: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args: [f8, 0, 1]
+    state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
+  - !!binary |
+    qeISGmmKEEA=
+  CROP_RESIZE_WITH_MAX_POOL: true
+  CUDA: false
+  DATA_DIR: /data1/gavinqi/eccv_competition/Detectron.pytorch-master/data
+  DATA_LOADER: !!python/object/new:utils.collections.AttrDict
+    dictitems: {NUM_THREADS: 4}
+    state: {__immutable__: true}
+  DEBUG: false
+  DEDUP_BOXES: 0.0625
+  EPS: 1.0e-14
+  EXPECTED_RESULTS: []
+  EXPECTED_RESULTS_ATOL: 0.005
+  EXPECTED_RESULTS_EMAIL: ''
+  EXPECTED_RESULTS_RTOL: 0.1
+  FAST_RCNN: !!python/object/new:utils.collections.AttrDict
+    dictitems: {CONV_HEAD_DIM: 256, MLP_HEAD_DIM: 1024, NUM_STACKED_CONVS: 4, ROI_BOX_HEAD: fast_rcnn_heads.roi_Xconv1fc_head,
+      ROI_XFORM_METHOD: RoIAlign, ROI_XFORM_RESOLUTION: 7, ROI_XFORM_SAMPLING_RATIO: 2}
+    state: {__immutable__: true}
+  FPN: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      COARSEST_STRIDE: 32
+      DIM: 256
+      EXTRA_CONV_LEVELS: false
+      FPN_ON: true
+      MULTILEVEL_ROIS: true
+      MULTILEVEL_RPN: true
+      PANET_ON: false
+      ROI_CANONICAL_LEVEL: 4
+      ROI_CANONICAL_SCALE: 224
+      ROI_MAX_LEVEL: 5
+      ROI_MIN_LEVEL: 2
+      RPN_ANCHOR_START_SIZE: 32
+      RPN_ASPECT_RATIOS: !!python/tuple [0.5, 1, 2]
+      RPN_COLLECT_SCALE: 1
+      RPN_MAX_LEVEL: 6
+      RPN_MIN_LEVEL: 2
+      USE_GN: false
+      ZERO_INIT_LATERAL: false
+    state: {__immutable__: true}
+  GROUP_NORM: !!python/object/new:utils.collections.AttrDict
+    dictitems: {DIM_PER_GP: -1, EPSILON: 1.0e-05, NUM_GROUPS: 32}
+    state: {__immutable__: true}
+  KRCNN: !!python/object/new:utils.collections.AttrDict
+    dictitems: {CONV_HEAD_DIM: 256, CONV_HEAD_KERNEL: 3, CONV_INIT: GaussianFill,
+      DECONV_DIM: 256, DECONV_KERNEL: 4, DILATION: 1, HEATMAP_SIZE: -1, INFERENCE_MIN_SIZE: 0,
+      KEYPOINT_CONFIDENCE: bbox, LOSS_WEIGHT: 1.0, MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH: 20,
+      NMS_OKS: false, NORMALIZE_BY_VISIBLE_KEYPOINTS: true, NUM_KEYPOINTS: -1, NUM_STACKED_CONVS: 8,
+      ROI_KEYPOINTS_HEAD: '', ROI_XFORM_METHOD: RoIAlign, ROI_XFORM_RESOLUTION: 7,
+      ROI_XFORM_SAMPLING_RATIO: 0, UP_SCALE: -1, USE_DECONV: false, USE_DECONV_OUTPUT: false}
+    state: {__immutable__: true}
+  MATLAB: matlab
+  MODEL: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      BBOX_REG_WEIGHTS: !!python/tuple [10.0, 10.0, 5.0, 5.0]
+      CLS_AGNOSTIC_BBOX_REG: false
+      CONV_BODY: FPN.fpn_ResNet50_conv5_body
+      FASTER_RCNN: true
+      KEYPOINTS_ON: false
+      LOAD_IMAGENET_PRETRAINED_WEIGHTS: true
+      MASK_ON: true
+      NUM_CLASSES: 9
+      RPN_ONLY: false
+      SHARE_RES5: false
+      TYPE: generalized_rcnn
+      UNSUPERVISED_POSE: false
+    state: {__immutable__: true}
+  MRCNN: !!python/object/new:utils.collections.AttrDict
+    dictitems: {CLS_SPECIFIC_MASK: true, CONV_INIT: MSRAFill, DILATION: 1, DIM_REDUCED: 256,
+      MEMORY_EFFICIENT_LOSS: true, RESOLUTION: 28, ROI_MASK_HEAD: mask_rcnn_heads.mask_rcnn_fcn_head_v1up4convs,
+      ROI_XFORM_METHOD: RoIAlign, ROI_XFORM_RESOLUTION: 14, ROI_XFORM_SAMPLING_RATIO: 2,
+      THRESH_BINARIZE: 0.5, UPSAMPLE_RATIO: 1, USE_FC_OUTPUT: false, WEIGHT_LOSS_MASK: 1.0}
+    state: {__immutable__: true}
+  NUM_GPUS: 8
+  OUTPUT_DIR: Outputs
+  PIXEL_MEANS: !!python/object/apply:numpy.core.multiarray._reconstruct
+    args:
+    - !!python/name:numpy.ndarray ''
+    - !!python/tuple [0]
+    - !!binary |
+      Yg==
+    state: !!python/tuple
+    - 1
+    - !!python/tuple [1, 1, 3]
+    - *id001
+    - false
+    - !!binary |
+      0LNZ9bm+WUB/arx0k/xcQK+UZYhjsV5A
+  POOLING_MODE: crop
+  POOLING_SIZE: 7
+  PYTORCH_VERSION_LESS_THAN_040: false
+  RESNETS: !!python/object/new:utils.collections.AttrDict
+    dictitems: {FREEZE_AT: 2, IMAGENET_PRETRAINED_WEIGHTS: data/pretrained_model/resnet50_caffe.pth,
+      NUM_GROUPS: 1, RES5_DILATION: 1, SHORTCUT_FUNC: basic_bn_shortcut, STEM_FUNC: basic_bn_stem,
+      STRIDE_1X1: true, TRANS_FUNC: bottleneck_transformation, USE_GN: false, WIDTH_PER_GROUP: 64}
+    state: {__immutable__: true}
+  RETINANET: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      ANCHOR_SCALE: 4
+      ASPECT_RATIOS: !!python/tuple [0.5, 1.0, 2.0]
+      BBOX_REG_BETA: 0.11
+      BBOX_REG_WEIGHT: 1.0
+      CLASS_SPECIFIC_BBOX: false
+      INFERENCE_TH: 0.05
+      LOSS_ALPHA: 0.25
+      LOSS_GAMMA: 2.0
+      NEGATIVE_OVERLAP: 0.4
+      NUM_CONVS: 4
+      POSITIVE_OVERLAP: 0.5
+      PRE_NMS_TOP_N: 1000
+      PRIOR_PROB: 0.01
+      RETINANET_ON: false
+      SCALES_PER_OCTAVE: 3
+      SHARE_CLS_BBOX_TOWER: false
+      SOFTMAX: false
+    state: {__immutable__: true}
+  RFCN: !!python/object/new:utils.collections.AttrDict
+    dictitems: {PS_GRID_SIZE: 3}
+    state: {__immutable__: true}
+  RNG_SEED: 3
+  ROOT_DIR: /data1/gavinqi/eccv_competition/Detectron.pytorch-master
+  RPN: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      ASPECT_RATIOS: !!python/tuple [0.5, 1, 2]
+      CLS_ACTIVATION: sigmoid
+      OUT_DIM: 512
+      OUT_DIM_AS_IN_DIM: true
+      RPN_ON: true
+      SIZES: !!python/tuple [64, 128, 256, 512]
+      STRIDE: 16
+    state: {__immutable__: true}
+  SOLVER: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      BASE_LR: 0.02
+      BIAS_DOUBLE_LR: true
+      BIAS_WEIGHT_DECAY: false
+      GAMMA: 0.1
+      LOG_LR_CHANGE_THRESHOLD: 1.1
+      LRS: []
+      LR_POLICY: steps_with_decay
+      MAX_ITER: 24000
+      MOMENTUM: 0.9
+      SCALE_MOMENTUM: true
+      SCALE_MOMENTUM_THRESHOLD: 1.1
+      STEPS: [0, 20000, 22000]
+      STEP_SIZE: 30000
+      TYPE: SGD
+      WARM_UP_FACTOR: 0.3333333333333333
+      WARM_UP_ITERS: 500
+      WARM_UP_METHOD: linear
+      WEIGHT_DECAY: 0.0001
+      WEIGHT_DECAY_GN: 0.0
+    state: {__immutable__: true}
+  TEST: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      BBOX_AUG: !!python/object/new:utils.collections.AttrDict
+        dictitems:
+          AREA_TH_HI: 32400
+          AREA_TH_LO: 2500
+          ASPECT_RATIOS: !!python/tuple []
+          ASPECT_RATIO_H_FLIP: false
+          COORD_HEUR: UNION
+          ENABLED: false
+          H_FLIP: false
+          MAX_SIZE: 4000
+          SCALES: !!python/tuple []
+          SCALE_H_FLIP: false
+          SCALE_SIZE_DEP: false
+          SCORE_HEUR: UNION
+        state: {__immutable__: true}
+      BBOX_REG: true
+      BBOX_VOTE: !!python/object/new:utils.collections.AttrDict
+        dictitems: {ENABLED: false, SCORING_METHOD: ID, SCORING_METHOD_BETA: 1.0,
+          VOTE_TH: 0.8}
+        state: {__immutable__: true}
+      COMPETITION_MODE: true
+      DATASETS: !!python/tuple [kitti_val]
+      DETECTIONS_PER_IM: 100
+      FORCE_JSON_DATASET_EVAL: false
+      KPS_AUG: !!python/object/new:utils.collections.AttrDict
+        dictitems:
+          AREA_TH: 32400
+          ASPECT_RATIOS: !!python/tuple []
+          ASPECT_RATIO_H_FLIP: false
+          ENABLED: false
+          HEUR: HM_AVG
+          H_FLIP: false
+          MAX_SIZE: 4000
+          SCALES: !!python/tuple []
+          SCALE_H_FLIP: false
+          SCALE_SIZE_DEP: false
+        state: {__immutable__: true}
+      MASK_AUG: !!python/object/new:utils.collections.AttrDict
+        dictitems:
+          AREA_TH: 32400
+          ASPECT_RATIOS: !!python/tuple []
+          ASPECT_RATIO_H_FLIP: false
+          ENABLED: false
+          HEUR: SOFT_AVG
+          H_FLIP: false
+          MAX_SIZE: 4000
+          SCALES: !!python/tuple []
+          SCALE_H_FLIP: false
+          SCALE_SIZE_DEP: false
+        state: {__immutable__: true}
+      MAX_SIZE: 3000
+      NMS: 0.5
+      PRECOMPUTED_PROPOSALS: false
+      PROPOSAL_FILES: !!python/tuple []
+      PROPOSAL_LIMIT: 2000
+      RPN_MIN_SIZE: 0
+      RPN_NMS_THRESH: 0.7
+      RPN_POST_NMS_TOP_N: 1000
+      RPN_PRE_NMS_TOP_N: 1000
+      SCALE: 800
+      SCORE_THRESH: 0.05
+      SOFT_NMS: !!python/object/new:utils.collections.AttrDict
+        dictitems: {ENABLED: false, METHOD: linear, SIGMA: 0.5}
+        state: {__immutable__: true}
+    state: {__immutable__: true}
+  TRAIN: !!python/object/new:utils.collections.AttrDict
+    dictitems:
+      ASPECT_CROPPING: false
+      ASPECT_GROUPING: true
+      ASPECT_HI: 2
+      ASPECT_LO: 0.5
+      BATCH_SIZE_PER_IM: 512
+      BBOX_INSIDE_WEIGHTS: !!python/tuple [1.0, 1.0, 1.0, 1.0]
+      BBOX_NORMALIZE_MEANS: !!python/tuple [0.0, 0.0, 0.0, 0.0]
+      BBOX_NORMALIZE_STDS: !!python/tuple [0.1, 0.1, 0.2, 0.2]
+      BBOX_NORMALIZE_TARGETS: true
+      BBOX_NORMALIZE_TARGETS_PRECOMPUTED: false
+      BBOX_THRESH: 0.5
+      BG_THRESH_HI: 0.5
+      BG_THRESH_LO: 0.0
+      CROWD_FILTER_THRESH: 0.7
+      DATASETS: !!python/tuple []
+      FG_FRACTION: 0.25
+      FG_THRESH: 0.5
+      FREEZE_CONV_BODY: false
+      GT_MIN_AREA: -1
+      IMS_PER_BATCH: 1
+      MAX_SIZE: 3000
+      PROPOSAL_FILES: !!python/tuple []
+      RPN_BATCH_SIZE_PER_IM: 256
+      RPN_FG_FRACTION: 0.5
+      RPN_MIN_SIZE: 0
+      RPN_NEGATIVE_OVERLAP: 0.3
+      RPN_NMS_THRESH: 0.7
+      RPN_POSITIVE_OVERLAP: 0.7
+      RPN_POST_NMS_TOP_N: 2000
+      RPN_PRE_NMS_TOP_N: 2000
+      RPN_STRADDLE_THRESH: 0
+      SCALES: !!python/tuple [800, 900, 1000, 1100, 1200]
+      SNAPSHOT_ITERS: 20000
+      USE_FLIPPED: true
+    state: {__immutable__: true}
+  VIS: false
+  VIS_TH: 0.9
+state: {__immutable__: true}

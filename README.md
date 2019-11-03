@@ -7,6 +7,8 @@ This repository has released the training and test set of KINS. The annotation f
 And the reference code of the method in CVPR 2019 paper '[Amodal Instance Segmentation through KINS Dataset](http://jiaya.me/papers/amodel_cvpr19.pdf)' has been released. The codebase is based on [pytorch-detectron](https://github.com/roytseng-tw/Detectron.pytorch).
 You can see some details from our released code. I am sorry that I can not transform it into the maskrcnn-benchmark with clear version.
 
+The dataset could be downloaded from http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d. Please download left color images of object data set (http://www.cvlibs.net/download.php?file=data_object_image_2.zip).
+
 ## Citation
 
 If our method and dataset are useful for your research, please consider citing:

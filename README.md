@@ -2,7 +2,7 @@
 by [Lu Qi](http://www.luqi.info), Li Jiang, [Shu Liu](http://www.shuliu.me), [Xiaoyong Shen](http://xiaoyongshen.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/).
 
 # Update! (16.02.2020)
-- **We update the new annotation with occlusion order in update_train_2020.json and update_test_2020.json. The visualization code is in vis_json_2020.py. Please be download in here(https://drive.google.com/drive/folders/1FuXz1Rrv5rrGG4n7KcQHVWKvSyr3Tkyo?usp=sharing).** 
+- **We update the new annotation with occlusion order in update_train_2020.json and update_test_2020.json. The visualization code is in vis_json_2020.py. Please download in here(https://drive.google.com/drive/folders/1FuXz1Rrv5rrGG4n7KcQHVWKvSyr3Tkyo?usp=sharing).** 
 - "a_*" and "i_*" represent the amodal and inmodal annotation. 
 - **The "oco_id" and "ico_id" represent the cluster id and the relative occlusion id in this cluster for instances.** As paper said, instances in an image are first partitioned into several disconnected clusters, each with a few connected instances for easy occlusion detection. Relative occlusion order is based on the distance of each instance to the camera. The non-overlapping instances are labeled as 0. As for the occluded instances in a cluster, order starts from 1 and increases by 1 when occluded once.
 
